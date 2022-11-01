@@ -1,29 +1,34 @@
 #include <stdio.h>
 #include <stdlib.h>
 #define SIZE 5
+
 /* run this program using the console pauser or add your own getch, system("pause") or input loop */
 
 int main(void) {
 	
 	int i;
 	int grade[SIZE];
-	int sum=0;
-	
-	printf("input %i scores : \n",SIZE);
+	int score[SIZE];
 	
 	for(i=0;i<SIZE;i++) {
 		
-		scanf("%d",&grade[i]);
+		score[i]=rand()%100;
+		
 	}
 	
 	for(i=0;i<SIZE;i++) {
 		
-		sum+=grade[i];
-		printf("grade[%d]=%d\n",i,grade[i]);
+		grade[i]=score[i];
+		
 	}
 	
-	printf("mean : %i\n",sum/SIZE);
+	for(i=0;i<SIZE;i++) {
+		
+		printf("score[%d]=%d(%d)\n",i,score[i],grade[i]);
+		
+	}
 	
 	return 0;
 }
+
 
